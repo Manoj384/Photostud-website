@@ -127,11 +127,11 @@
           <!-- End Page Header -->
     
           <!-- ======= Gallery Section ======= -->
-
+          
           <div class="image--gallery">
             <header class="text--effect__header">
               <section class="text-effect">
-                <h2 contenteditable="true">semi-candid</h2>
+                <h2 contenteditable="true">Traditional-photo</h2>
               </section>
             </header>
             <!-- column1 -->
@@ -139,9 +139,9 @@
 
               <div class="dream">
                 <div class="dream">
-                  <img src="semi-candid/1.JPG" alt="Image 1" class="image-clickable" data-source="semi-candid/1.JPG" />
-                  <img src="semi-candid/2.JPG" alt="Image 2" class="image-clickable" data-source="semi-candid/2.JPG" />
-                  <img src="semi-candid/3.JPG" alt="Image 3" class="image-clickable" data-source="semi-candid/3.JPG" />
+                  <img src="TRA/1.JPG" alt="Image 1" class="image-clickable" data-source="TRA/1.JPG" />
+                  <img src="TRA/2.JPG" alt="Image 2" class="image-clickable" data-source="TRA/2.JPG" />
+                  <img src="TRA/3.JPG" alt="Image 3" class="image-clickable" data-source="TRA/3.JPG" />
                 </div>
                 
                 <!-- Modal -->
@@ -150,32 +150,32 @@
                   <img src="" class="model-content__image" id="modalImage">
                 </div>
               </div>
-              <!-- <div class="dream">
+              <div class="dream">
                 <div class="dream">
-                  <img src="images/4.jpg" alt="Image 1" class="image-clickable" data-source="images/4.jpg" />
-                  <img src="images/5.jpg" alt="Image 2" class="image-clickable" data-source="images/5.jpg" />
-                  <img src="images/6.jpg" alt="Image 3" class="image-clickable" data-source="images/6.jpg" />
-                </div> -->
+                  <img src="TRA/4.JPG" alt="Image 1" class="image-clickable" data-source="TRA/4.JPG" />
+                  <img src="TRA/10.JPG" alt="Image 2" class="image-clickable" data-source="TRA/10.JPG" />
+                  <img src="TRA/11.JPG" alt="Image 3" class="image-clickable" data-source="TRA/11.JPG" />
+                </div>
                 
                 <!-- Modal -->
-                <!-- <div class="modal" id="imageModal">
+                <div class="modal" id="imageModal">
                   <span class="close" id="closeModal">&times;</span>
                   <img src="" class="model-content__image" id="modalImage">
                 </div>
               </div>
               <div class="dream">
                 <div class="dream">
-                  <img src="images/7.jpg" alt="Image 1" class="image-clickable" data-source="images/1.jpg" />
-                  <img src="images/8.jpg" alt="Image 2" class="image-clickable" data-source="images/2.jpg" />
-                  <img src="images/9.jpg" alt="Image 3" class="image-clickable" data-source="images/3.jpg" />
-                </div> -->
+                  <img src="TRA/7.JPG" alt="Image 1" class="image-clickable" data-source="TRA/7.JPG" />
+                  <img src="TRA/8.JPG" alt="Image 2" class="image-clickable" data-source="TRA/8.JPG" />
+                  <img src="TRA/9.JPG" alt="Image 3" class="image-clickable" data-source="TRA/9.JPG" />
+                </div>
                 
                 <!-- Modal -->
-                <!-- <div class="modal" id="imageModal">
+                <div class="modal" id="imageModal">
                   <span class="close" id="closeModal">&times;</span>
                   <img src="" class="model-content__image" id="modalImage">
                 </div>
-              </div> -->
+              </div>
 
             </div>
             <div class="btn">
@@ -194,13 +194,17 @@
             </div>
       
           </div>
-      
-        <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
         </footer>
+    
+        <a
+          href="#"
+          class="scroll-top d-flex align-items-center justify-content-center"
+          ><i class="bi bi-arrow-up-short"></i
+        ></a>
+    
         <div id="preloader">
           <div class="line"></div>
         </div>
-
     
         <!-- Vendor JS Files -->
         <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -230,13 +234,16 @@
                 image.classList.remove("hover-effect");
 
                 // Reset any previously applied styles
-                modalImage.style.maxWidth = "100%";
-                modalImage.style.maxHeight = "100%";
+                modalImage.style.maxWidth = "90%";
+                modalImage.style.maxHeight = "90%";
                 modalImage.style.objectFit = "contain";
 
                 modalContent.style.display = "flex";
                 modalContent.style.justifyContent = "center";
                 modalContent.style.alignItems = "center";
+                // modalContent.style.width = "90vw";
+                // modalContent.style.height = "90vh";
+
               }
             });
           });
@@ -266,7 +273,7 @@
 
         </script>
         
-
+        
         
       </body>
     </html>
