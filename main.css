@@ -1,11 +1,28 @@
-/*
 
-TemplateMo 552 Video Catalog
+body {
+  --sb-track-color: #2d2828;
+  --sb-thumb-color: #ff0092;
+  --sb-size: 10px;
 
-https://templatemo.com/tm-552-video-catalog
+  scrollbar-color: var(--sb-thumb-color) 
+                   var(--sb-track-color);
+}
 
-*/
+body::-webkit-scrollbar {
+  width: var(--sb-size) 
+}
 
+body::-webkit-scrollbar-track {
+  background: var(--sb-track-color);
+  border-radius: 10px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: var(--sb-thumb-color);
+  border-radius: 10px;
+  
+}
+  
 html { scroll-behavior: smooth; overflow-x: hidden; }
 
 body {
@@ -678,12 +695,12 @@ h6 {
 .page-header .cta-btn:hover {
   background: #2cbc85;
 }
-@media screen and (min-width:1023px) {
+/* @media screen and (min-width:1023px) {
   .contact .info-item .contact__email{
     font-size: 16px;
     padding: 10px 0;
   }
-}
+} */
 
 /*--------------------------------------------------------------
 # Scroll top button
@@ -975,6 +992,12 @@ h6 {
 .social--links .header-social-links a {
   font-size: 40px;
   padding-left: 15px;
+}
+@media screen and (min-width:1025px) {
+  .social--links .header-social-links a{
+    font-size: 55px;
+    padding-left: 20px;
+  }
 }
 
 /*--------------------------------------------------------------
@@ -2000,16 +2023,16 @@ h6 {
   margin: 40px 0 70px 0;
   /* font-size: 10rem; */
   background: #222;
-  /* padding: 15px 20px; */
-  border-radius: 15px;
+  padding:0px 11px 4px 11px;;
+  border-radius: 9px;
   
 }
 .image--gallery .btn a{
   color: #fff;
   text-decoration: none;
-  font-size: 2rem;
+  font-size: 20px;
   font-weight: bold;
-  letter-spacing: 1px;
+  /* letter-spacing: 0.5px; */
 }
 .box .dream img:hover{
   cursor: pointer;
@@ -2304,6 +2327,7 @@ ul {
 /* color of website */
 .row__website{
   color: gray;
+  font-size: 19px;
 }
 .row__website:hover{
   color: #fff;
@@ -2615,11 +2639,10 @@ ul {
 
 .header-social-links .link__youtube:hover{
   color: #fff;
-  background-color: red;
+  background:#c4302b ;
   background-clip: content-box;
-  /* border-radius: 50%; */
-  height: 30px;
-  /* padding: 10px 0; */
+  border-radius: 5px;
+  height: 50%;
 }
 
 
@@ -2653,7 +2676,7 @@ ul {
 
 .text-effect h2{
   position: relative;
-  font-size: 1.4rem;
+  font-size: 2rem;
   letter-spacing: 2px;
   color: #0e3742;
   text-transform: uppercase;
@@ -2664,6 +2687,12 @@ ul {
   outline: none;
   animation: animate-text 5s linear infinite;
   font-family: var(--font-secondary);
+}
+
+@media screen and (max-width:767px){
+  .text-effect .traditional{
+    font-size: 1.4rem;
+  }
 }
 
 @keyframes animate-text{
