@@ -1,11 +1,28 @@
-/*
 
-TemplateMo 552 Video Catalog
+body {
+  --sb-track-color: #2d2828;
+  --sb-thumb-color: #ff0092;
+  --sb-size: 10px;
 
-https://templatemo.com/tm-552-video-catalog
+  scrollbar-color: var(--sb-thumb-color) 
+                   var(--sb-track-color);
+}
 
-*/
+body::-webkit-scrollbar {
+  width: var(--sb-size) 
+}
 
+body::-webkit-scrollbar-track {
+  background: var(--sb-track-color);
+  border-radius: 10px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: var(--sb-thumb-color);
+  border-radius: 10px;
+  
+}
+  
 html { scroll-behavior: smooth; overflow-x: hidden; }
 
 body {
@@ -678,12 +695,12 @@ h6 {
 .page-header .cta-btn:hover {
   background: #2cbc85;
 }
-@media screen and (min-width:1023px) {
+/* @media screen and (min-width:1023px) {
   .contact .info-item .contact__email{
     font-size: 16px;
     padding: 10px 0;
   }
-}
+} */
 
 /*--------------------------------------------------------------
 # Scroll top button
@@ -970,6 +987,16 @@ h6 {
 @media (max-width: 575px) {
   .header .header-social-links a {
     padding-left: 5px;
+  }
+}
+.social--links .header-social-links a {
+  font-size: 40px;
+  padding-left: 15px;
+}
+@media screen and (min-width:1025px) {
+  .social--links .header-social-links a{
+    font-size: 55px;
+    padding-left: 20px;
   }
 }
 
@@ -1996,16 +2023,16 @@ h6 {
   margin: 40px 0 70px 0;
   /* font-size: 10rem; */
   background: #222;
-  /* padding: 15px 20px; */
-  border-radius: 15px;
+  padding:0px 11px 4px 11px;;
+  border-radius: 9px;
   
 }
 .image--gallery .btn a{
   color: #fff;
   text-decoration: none;
-  font-size: 2rem;
+  font-size: 20px;
   font-weight: bold;
-  letter-spacing: 1px;
+  /* letter-spacing: 0.5px; */
 }
 .box .dream img:hover{
   cursor: pointer;
@@ -2063,6 +2090,9 @@ h6 {
 }
 @media only screen and  (max-width:655px){
   .image--gallery .heading{
+      width: 100%;
+  }
+  .video .image--gallery .heading{
       width: 100%;
   }
   .image--gallery .heading h3{
@@ -2215,7 +2245,7 @@ ul {
 }
 
 .video-container .video video{
-  height: 92%;
+  height: 82%;
   width: 100%;
   object-fit: cover;
   outline: none;
@@ -2300,6 +2330,7 @@ ul {
 /* color of website */
 .row__website{
   color: gray;
+  font-size: 19px;
 }
 .row__website:hover{
   color: #fff;
@@ -2373,18 +2404,26 @@ ul {
 
 .link__facebook{
   color: #3B5998;
+  background-clip: text; /* This clips the gradient to the text content. */
+  -webkit-background-clip: text; /* For compatibility with older browsers. */
+  /* color: transparent; Make the text transparent so that only the gradient shows through. */
+  display: inline-block; /* Ensure the link behaves as a block-level element. */
 }
 .link__insta{
   background: linear-gradient(45deg, rgb(254, 218, 117), rgb(250, 126, 30), rgb(214, 41, 118), rgb(150, 47, 191), rgb(79, 91, 213));
   background-clip: text; /* This clips the gradient to the text content. */
   -webkit-background-clip: text; /* For compatibility with older browsers. */
-  color: transparent; /* Make the text transparent so that only the gradient shows through. */
+   color: transparent; /*Make the text transparent so that only the gradient shows through. */
   display: inline-block; /* Ensure the link behaves as a block-level element. */
   padding: 5px; /* Add some padding for spacing. You can adjust this as needed. */
 }
 
 .link__youtube{
   color:#c4302b ;
+  background-clip: text; /* This clips the gradient to the text content. */
+  -webkit-background-clip: text; /* For compatibility with older browsers. */
+  /* color: transparent; Make the text transparent so that only the gradient shows through. */
+  display: inline-block; /* Ensure the link behaves as a block-level element. */
 }
 
 
@@ -2556,7 +2595,7 @@ ul {
   transition: transform 0.2s;
 }
 
-.header .header-social-links a:hover {
+.header-social-links a:hover {
   transform: scale(1.2);
   transition: transform 0.2s;
 }
@@ -2568,6 +2607,7 @@ ul {
 @media screen and (max-width:374px) {
   .header-social-links{
     line-height: 0;
+    padding-left: 10px;
   }
 }
 
@@ -2595,7 +2635,9 @@ ul {
 .header .header-social-links .link__facebook:hover {
   color: #fff;
   background:#3B5998 ;
-  border-radius: 15px;
+  background-clip: content-box;
+  border-radius:50%;
+  
 }
 
 .header .header-social-links .link__youtube:hover{
@@ -2603,19 +2645,24 @@ ul {
   background:#c4302b ;
   background-clip: content-box;
   border-radius: 5px;
+  height: 50%;
 }
 
 
 .header-social-links .link__youtube:hover{
   color: #fff;
-  background: red;
+  background:#c4302b ;
+  background-clip: content-box;
   border-radius: 5px;
+  height: 50%;
 }
+
 
 .header-social-links .link__facebook:hover{
   color: #fff;
   background:#3B5998 ;
-  border-radius: 25px;
+  background-clip: content-box;
+  border-radius: 50%;
 } 
 
 .header-social-links .link__insta:hover {
@@ -2652,6 +2699,12 @@ ul {
   outline: none;
   animation: animate-text 5s linear infinite;
   font-family: var(--font-secondary);
+}
+
+@media screen and (max-width:767px){
+  .text-effect .traditional{
+    font-size: 1.4rem;
+  }
 }
 
 @keyframes animate-text{
@@ -2733,3 +2786,33 @@ ul {
     51% 62%, 67% 50%, 84% 45%, 100% 46%, 100% 100%, 0% 100%);
   }
 } */
+.video .image--gallery {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin:0;
+}
+
+.video .image--gallery .heading {
+  text-shadow: 3px 3px 3px gray;
+  padding: 0;
+}
+
+@media only screen and (max-width: 655px){
+.video .image--gallery .heading h3 {
+    font-size: 2rem;
+  }
+}
+.video .image--gallery .heading h3{  
+  font-weight: normal;
+  color: #fff;
+  padding: 0px;
+}
+
+@media only screen and (min-width: 655px){
+.video .image--gallery .heading h3 {
+    font-size: 5rem;
+  }
+}
