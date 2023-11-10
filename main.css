@@ -2092,6 +2092,9 @@ h6 {
   .image--gallery .heading{
       width: 100%;
   }
+  .video .image--gallery .heading{
+      width: 100%;
+  }
   .image--gallery .heading h3{
       font-size: 3rem;
   }
@@ -2242,7 +2245,7 @@ ul {
 }
 
 .video-container .video video{
-  height: 92%;
+  height: 82%;
   width: 100%;
   object-fit: cover;
   outline: none;
@@ -2401,18 +2404,26 @@ ul {
 
 .link__facebook{
   color: #3B5998;
+  background-clip: text; /* This clips the gradient to the text content. */
+  -webkit-background-clip: text; /* For compatibility with older browsers. */
+  /* color: transparent; Make the text transparent so that only the gradient shows through. */
+  display: inline-block; /* Ensure the link behaves as a block-level element. */
 }
 .link__insta{
   background: linear-gradient(45deg, rgb(254, 218, 117), rgb(250, 126, 30), rgb(214, 41, 118), rgb(150, 47, 191), rgb(79, 91, 213));
   background-clip: text; /* This clips the gradient to the text content. */
   -webkit-background-clip: text; /* For compatibility with older browsers. */
-  color: transparent; /* Make the text transparent so that only the gradient shows through. */
+   color: transparent; /*Make the text transparent so that only the gradient shows through. */
   display: inline-block; /* Ensure the link behaves as a block-level element. */
   padding: 5px; /* Add some padding for spacing. You can adjust this as needed. */
 }
 
 .link__youtube{
   color:#c4302b ;
+  background-clip: text; /* This clips the gradient to the text content. */
+  -webkit-background-clip: text; /* For compatibility with older browsers. */
+  /* color: transparent; Make the text transparent so that only the gradient shows through. */
+  display: inline-block; /* Ensure the link behaves as a block-level element. */
 }
 
 
@@ -2596,6 +2607,7 @@ ul {
 @media screen and (max-width:374px) {
   .header-social-links{
     line-height: 0;
+    padding-left: 10px;
   }
 }
 
@@ -2624,7 +2636,7 @@ ul {
   color: #fff;
   background:#3B5998 ;
   background-clip: content-box;
-  border-radius: 15px;
+  border-radius:50%;
   
 }
 
@@ -2774,3 +2786,33 @@ ul {
     51% 62%, 67% 50%, 84% 45%, 100% 46%, 100% 100%, 0% 100%);
   }
 } */
+.video .image--gallery {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin:0;
+}
+
+.video .image--gallery .heading {
+  text-shadow: 3px 3px 3px gray;
+  padding: 0;
+}
+
+@media only screen and (max-width: 655px){
+.video .image--gallery .heading h3 {
+    font-size: 2rem;
+  }
+}
+.video .image--gallery .heading h3{  
+  font-weight: normal;
+  color: #fff;
+  padding: 0px;
+}
+
+@media only screen and (min-width: 655px){
+.video .image--gallery .heading h3 {
+    font-size: 5rem;
+  }
+}
