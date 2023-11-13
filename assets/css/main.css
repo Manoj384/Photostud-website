@@ -1,8 +1,8 @@
 
 body {
-  --sb-track-color: #2d2828;
-  --sb-thumb-color: #ff0092;
-  --sb-size: 10px;
+  --sb-track-color: #232E33;
+  --sb-thumb-color: #868686;
+  --sb-size: 8px;
 
   scrollbar-color: var(--sb-thumb-color) 
                    var(--sb-track-color);
@@ -2629,7 +2629,7 @@ ul {
   background: linear-gradient(45deg, rgb(254, 218, 117), rgb(250, 126, 30), rgb(214, 41, 118), rgb(150, 47, 191), rgb(79, 91, 213));
   background-clip: content-box;
   color: #fff;
-  border-radius: 20px;
+  border-radius: 25px;
 }
 
 .header .header-social-links .link__facebook:hover {
@@ -2813,6 +2813,28 @@ ul {
 
 @media only screen and (min-width: 655px){
 .video .image--gallery .heading h3 {
-    font-size: 5rem;
+    font-size: 2.1rem;
   }
 }
+
+.box .dream img{
+  width: 100%;
+}
+
+
+.image--gallery .box .video--display{
+  display: none;
+}
+
+/* Styles for images in two grids when the width is more than 1023px */
+/* @media (min-width: 1024px) {
+  .image--gallery .video--grid .box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  } */
+
+  /* .image--gallery .video--grid .dream {
+    width: 48%; 
+  }
+} */
