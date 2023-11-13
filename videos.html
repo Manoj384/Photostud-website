@@ -101,62 +101,55 @@
           <div class="image--gallery">
             <header class="text--effect__header">
               <section class="text-effect">
-                <h2 contenteditable="true" class="traditional">Traditional-photo</h2>
+                <h2 contenteditable="true" class="traditional">Video Gallery</h2>
               </section>
             </header>
             <!-- column1 -->
-            <div class="box">
+            <div class="video--grid">
+              <div class="box">
+                <div class="dream">
+                  <div class="dream">
+                    <a href="https://youtu.be/ATBeR6tquD0?si=x8EI2AAFNg22lNzw" target="_blank">
+                      <img src="first_page/Screenshot_20231111-190408_YouTube.jpg"></img>
+                    </a>
+                    <a href="https://youtu.be/nnw8VhiUWog?si=5jyHBqDh6Uh5Pl5D" target="_blank">
+                      <img src="first_page/20231112_162144.jpg"></img>
+                    </a>
+                    <!-- <img src="TRA/3.JPG" alt="Image 3" class="image-clickable" data-source="TRA/3.JPG" /> -->
+                  </div>
+                </div>
+                <div class="dream">
+                  <div class="dream">
+                    <a href="https://youtu.be/ZZqdt3kzh5E?si=f6RkvSAJjabdyT4j" target="_blank">
+                      <img src="first_page/baby_shower.png"></img>
+                    </a>                    
+                    <a href="https://youtu.be/P8rZhMwfQKg?si=cBnDSbMFNoLl-fuB" target="_blank">
+                      <img src="first_page/twins.png"></img>
+                    </a>                    <!-- <img src="TRA/11.JPG" alt="Image 3" class="image-clickable" data-source="TRA/11.JPG" /> -->
+                  </div>
+                </div>
 
-              <div class="dream">
-                <div class="dream">
-                  <img src="TRA/1.JPG" alt="Image 1" class="image-clickable" data-source="TRA/1.JPG" />
-                  <img src="TRA/2.JPG" alt="Image 2" class="image-clickable" data-source="TRA/2.JPG" />
-                  <img src="TRA/3.JPG" alt="Image 3" class="image-clickable" data-source="TRA/3.JPG" />
+                <div class="video--display">
+                  <div class="dream">
+                    <div class="dream">
+                      <img src="TRA/4.JPG" alt="Image 1" class="image-clickable" data-source="TRA/4.JPG" />
+                      <img src="TRA/10.JPG" alt="Image 2" class="image-clickable" data-source="TRA/10.JPG" />
+                      <!-- <img src="TRA/11.JPG" alt="Image 3" class="image-clickable" data-source="TRA/11.JPG" /> -->
+                    </div>
+                  </div>
                 </div>
-                
-                <!-- Modal -->
-                <div class="modal" id="imageModal">
-                  <span class="close" id="closeModal">&times;</span>
-                  <img src="" class="model-content__image" id="modalImage">
-                </div>
-              </div>
-              <div class="dream">
-                <div class="dream">
-                  <img src="TRA/4.JPG" alt="Image 1" class="image-clickable" data-source="TRA/4.JPG" />
-                  <img src="TRA/10.JPG" alt="Image 2" class="image-clickable" data-source="TRA/10.JPG" />
-                  <img src="TRA/11.JPG" alt="Image 3" class="image-clickable" data-source="TRA/11.JPG" />
-                </div>
-                
-                <!-- Modal -->
-                <div class="modal" id="imageModal">
-                  <span class="close" id="closeModal">&times;</span>
-                  <img src="" class="model-content__image" id="modalImage">
-                </div>
-              </div>
-              <div class="dream">
-                <div class="dream">
-                  <img src="TRA/7.JPG" alt="Image 1" class="image-clickable" data-source="TRA/7.JPG" />
-                  <img src="TRA/8.JPG" alt="Image 2" class="image-clickable" data-source="TRA/8.JPG" />
-                  <img src="TRA/9.JPG" alt="Image 3" class="image-clickable" data-source="TRA/9.JPG" />
-                </div>
-                
-                <!-- Modal -->
-                <div class="modal" id="imageModal">
-                  <span class="close" id="closeModal">&times;</span>
-                  <img src="" class="model-content__image" id="modalImage">
-                </div>
-              </div>
 
+
+                
+              </div>
             </div>
             <div class="btn">
               <a href="#">More</a>
             </div>
           </div>
-          <!-- <div class="popup__imgage">
-            <span>&times;</span>
-            <img src="images/1.jpg" alt="">
-          </div> -->
+
         <!-- ======= Footer ======= -->
+
         <footer id="footer" class="footer">
           <div class="container">
             <div class="copyright">
@@ -165,7 +158,6 @@
       
           </div>
         </footer>
-    
         <a
           href="#"
           class="scroll-top d-flex align-items-center justify-content-center"
@@ -184,66 +176,6 @@
         <script src="assets/vendor/php-email-form/validate.js"></script>
     
         <!-- Template Main JS File -->
-        <script src="assets/js/main.js"></script>
-        <script>
-          var modal = document.getElementById("imageModal");
-          var modalImage = document.getElementById("modalImage");
-          var closeModal = document.getElementById("closeModal");
-          var modalContent = modalImage.parentElement; // Get the parent of the modal image
-
-          var imageClickables = document.querySelectorAll(".image-clickable");
-
-          imageClickables.forEach(function(image) {
-            image.addEventListener("click", function() {
-              // Check the viewport width
-              if (window.innerWidth >= 767) {
-                modal.style.display = "flex";
-                modalImage.src = image.getAttribute("data-source");
-                
-                // Remove the hover effect class when an image is clicked
-                image.classList.remove("hover-effect");
-
-                // Reset any previously applied styles
-                // modalImage.style.maxWidth = "90%";
-                // modalImage.style.maxHeight = "90%";
-                modalImage.style.objectFit = "contain";
-
-                modalContent.style.display = "flex";
-                modalContent.style.justifyContent = "center";
-                modalContent.style.alignItems = "center";
-                // modalContent.style.width = "90vw";
-                // modalContent.style.height = "90vh";
-
-              }
-            });
-          });
-
-          closeModal.addEventListener("click", function() {
-            closeModalModal();
-          });
-
-          modal.addEventListener("click", function(event) {
-            if (event.target === modal) {
-              closeModalModal();
-            }
-          });
-
-          // Function to close the modal
-          function closeModalModal() {
-            modal.style.display = "none";
-
-            // Restore the hover effect class when closing the modal
-            imageClickables.forEach(function(image) {
-              image.classList.add("hover-effect");
-            });
-          }
-
-
-
-
-        </script>
-        
-        
-        
+        <script src="assets/js/main.js"></script>        
       </body>
     </html>
